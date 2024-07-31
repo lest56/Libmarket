@@ -148,4 +148,4 @@ class UsuarioConsumidor(Usuario):
 
         
 if __name__ == '__main__':
- 
+    ...
