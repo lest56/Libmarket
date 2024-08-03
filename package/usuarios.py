@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from cadastro import cadastrar_usuario
 
 class Usuario(ABC):
-    def __init__(self, nome_usuario:str, nascimento_usuario:str, email_usuario:str, cpf_usuario:str, numero_usuario:int) -> None:
+    def __init__(self, nome_usuario:str, nascimento_usuario:str, email_usuario:str, cpf_usuario:str, numero_usuario:str) -> None:
         self.id_usuario = int()
         self.nome_usuario = nome_usuario
         self.nascimento_usuario = nascimento_usuario
@@ -143,9 +143,11 @@ class UsuarioConsumidor(Usuario):
     def cadastrar(self):
         cadastrar_usuario(self.nome_usuario, self.nascimento_usuario, self.email_usuario, self.cpf_usuario, self.nome_usuario)
 
-    def logar(self):
-        ...
+    def logar():
+        print('oi')
 
         
 if __name__ == '__main__':
-    ...
+    user = UsuarioConsumidor('Leonardo Figorelli Santana', '28/10/2005', 'leofigorelli@gmail.com', '48448072855', '11944636254')
+    user.cadastrar()
+    UsuarioConsumidor.logar()

@@ -56,8 +56,5 @@ class ConnectionUsers(Connection):
 if __name__ == '__main__':
     dbl = ConnectionLivro()
     dbu = ConnectionUsers()
-    data = dbu.select('nome_usuario, cpf_usuario')
-    print(data)
-    
-
+    data_user = dbu.select('nome_usuario, cpf_usuario')
     # dbl.insert('Manifesto Comunista', 'Politico', '1848-02-21', 20.99)

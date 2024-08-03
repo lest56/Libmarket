@@ -18,10 +18,9 @@ def cadastrar_livro(titulo:str, autor:str, genero:str, valor:float) -> bool:
 def encontrar_usuario(nome_usuario: str, cpf_usuario: str) -> bool:
     con = ConnectionUsers()
     lista_cpfs_nomes = con.select('nome_usuario, cpf_usuario')
-    lista_cpfs = [c for n, c in lista_cpfs_nomes]
-    lista_nomes = [n for n, c in lista_cpfs_nomes]
-    if nome_usuario in lista_nomes and cpf_usuario in lista_cpfs:
-        return False
+    for cpfs_nomes in lista_cpfs_nomes:
+        if nome_usuario in cpfs_nomes and cpf_usuario in cpfs_nomes:
+            return False
     return True
 
 def encontrar_livro(titulo:str, autor:str) -> bool:
